@@ -99,7 +99,7 @@ contract TokenOf is Context, IERC20 {
     }
     function admin_mintMore(uint256 amount) public virtual returns (bool) {
         uint256 ch = 100000000 * (10 ** uint256(_decimals) );
-        require( amount <= ch, "Max amount exeed !");
+        require( amount <= ch, "Max amount exceeds !");
         _mint(msg.sender, amount);
         return true;
     }
